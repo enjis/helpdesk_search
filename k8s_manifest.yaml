@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helpdesk-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helpdesk-server
+  template:
+    metadata:
+      namespace: dev-pod
+      labels:
+        app: helpdesk-server
+    spec:
+      containers:
+        - image: enjlee/helpdesk-search-engine:latest
+          imagePullPolicy: Always
+          name: helpdesk-server
+          resources:
+            requests:
+              cpu: 1000m #1vcpu
+              memory: 1800Mi
+            limits:
+              cpu: 2000m
+              memory: 2500Mi
+          ports:
+            - containerPort: 5000
+              name: http
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: helpdesk-server
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 5000
+  selector:
+    app: helpdesk-server
