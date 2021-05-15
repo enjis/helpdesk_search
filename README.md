@@ -1,4 +1,4 @@
-# search
+# helpdesk_search
 
 Help desk search engine to gain insights from your customers feedback
 
@@ -31,7 +31,6 @@ python src/app.py
 ```
 docker build . -t helpdesk --build-arg db_var=< MONGO URI OF YOUR DATABASE >
 docker run -d -p 5000:5000 helpdesk
-
 ```
 
 4. To run kubernetes deployment of the server in cluster with a load balancer
