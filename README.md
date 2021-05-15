@@ -1,6 +1,6 @@
 # helpdesk_search
 
-[![Continuous Integration](https://github.com/enjis/helpdesk_search/actions/workflows/ci.yml/badge.svg?event=check_run)](https://github.com/enjis/helpdesk_search/actions/workflows/ci.yml)
+[![Continuous Integration](https://github.com/enjis/helpdesk_search/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/enjis/helpdesk_search/actions/workflows/ci.yml)
 
 Help desk search engine to gain insights from your customers feedback
 
