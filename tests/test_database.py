@@ -20,7 +20,7 @@ class TestInsert(unittest.TestCase):
 
     def test_db_insert(self):
         timer_start = time.time()
-        result = db.db_insert(self.text, self.user)
+        result = database.db_insert(self.text, self.user)
         self.assertEqual(result, self.expected_result)
 
 
@@ -35,7 +35,7 @@ class TestSearch(unittest.TestCase):
 
     def test_db_search(self):
         timer_start = time.time()
-        related_documents = db.db_search(self.text)
+        related_documents = database.db_search(self.text)
         timer_stop = time.time()
         self.assertIsInstance(related_documents, list)
         for document in related_documents:
