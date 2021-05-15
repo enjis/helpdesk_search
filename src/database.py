@@ -2,7 +2,7 @@ from typing import List
 from pymongo import MongoClient
 from constants import DB_URI
 
-print(DB_URI)
+# print(DB_URI)
 client = MongoClient(DB_URI, retryWrites=False)
 db = client["helpdesk"]
 collection = db["documents"]

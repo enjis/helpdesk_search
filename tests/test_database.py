@@ -4,7 +4,7 @@ import time
 
 sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
 import unittest
-from src import db
+from src import database
 
 
 class TestInsert(unittest.TestCase):
