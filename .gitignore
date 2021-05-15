@@ -9,6 +9,8 @@ run.bat
 #folders
 log/**
 
+!.gitkeep
+
 # Distribution / packaging
 .vscode
 .Python
