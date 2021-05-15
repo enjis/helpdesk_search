@@ -1,4 +1,32 @@
-To build and run docker container
+# search
+
+Help desk search engine to gain insights from your customers feedback
+
+1. To insert dummy fake data in the database
+
+```
+python utils/fake_data.py --number 1000
+```
+
+2. To run the application
+
+For WINDOWS :
+
+```
+set DB_URI=< MONGO URI OF YOUR DATABASE >
+set SECRET_KEY=abxyz
+python src/app.py
+```
+
+For LINUX :
+
+```
+export DB_URI=< MONGO URI OF YOUR DATABASE >
+export SECRET_KEY="abxyz"
+python src/app.py
+```
+
+3. To build and run docker container
 
 ```
 docker build . -t helpdesk --build-arg db_var=< MONGO URI OF YOUR DATABASE >
@@ -6,13 +34,13 @@ docker run -d -p 5000:5000 helpdesk
 
 ```
 
-To run kubernetes deployment of the server in cluster with a load balancer
+4. To run kubernetes deployment of the server in cluster with a load balancer
 
 ```
 kubectl apply -f k8s_manifest.yaml
 ```
 
-Check deployment status with
+5. Check deployment status with
 
 ```
 kubectl get po
